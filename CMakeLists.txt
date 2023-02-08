@@ -12,7 +12,7 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -
 include_directories(.)
 include_directories(/home/lwk/apps/yaml-cpp-master/include)
 
-link_directories(/home/lwk/Sylar/lib)
+link_directories(/home/lwk/Coroutine-Webserve/lib)
 # find_library(YAMLCPP libyaml-cpp.a)
 
 # 将下面的 .cc 文件，统称为 LIB_SRC 变量
