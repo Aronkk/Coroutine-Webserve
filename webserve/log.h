@@ -174,7 +174,7 @@ private:
 };
 
 
-// 日志输出地（stdout，file）
+// 日志输出地
 class LogAppender{
 friend class Logger;
 public:
@@ -207,25 +207,25 @@ public:
     typedef Spinlock MutexType;
     Logger(const std::string& name = "root");
 
-    void log(LogLevel::Level level, LogEvent::ptr event);   // 写日志（判断日志等级），下面的都是调用了这个函数
+    void log(LogLevel::Level level, LogEvent::ptr event);   // 写日志
     void debug(LogEvent::ptr event);                        // 写debug级别日志
     void info(LogEvent::ptr event);                         // 写info级别日志
     void warn(LogEvent::ptr event);                         // 写warn级别日志
-    void error(LogEvent::ptr event);                        // 写error级别日志
-    void fatal(LogEvent::ptr event);                        // 写fatal级别日志
+    void error(LogEvent::ptr event);                        //写error级别日志
+    void fatal(LogEvent::ptr event);                        //写fatal级别日志
 
-    void addAppender(LogAppender::ptr appender);            // 添加日志目标
-    void delAppender(LogAppender::ptr appender);            // 删除日志目标
-    void clearAppenders();                                  // 清空日志目标
+    void addAppender(LogAppender::ptr appender);            //添加日志目标
+    void delAppender(LogAppender::ptr appender);            //删除日志目标
+    void clearAppenders();                                  //清空日志目标
 
-    LogLevel::Level getLevel() const { return m_level;}     // 返回日志级别
-    void setLevel(LogLevel::Level val) { m_level = val;}    // 设置日志级别
-    const std::string& getName() const { return m_name;}    // 返回日志名称
+    LogLevel::Level getLevel() const { return m_level;}     //返回日志级别
+    void setLevel(LogLevel::Level val) { m_level = val;}    //设置日志级别
+    const std::string& getName() const { return m_name;}    //返回日志名称
 
-    void setFormatter(LogFormatter::ptr val);               // 设置日志格式器
-    void setFormatter(const std::string& val);              // 设置日志格式模板
-    LogFormatter::ptr getFormatter();                       // 获取日志格式器
-    std::string toYamlString();                             // 将日志器的配置转成YAML String
+    void setFormatter(LogFormatter::ptr val);               //设置日志格式器
+    void setFormatter(const std::string& val);              //设置日志格式模板
+    LogFormatter::ptr getFormatter();                       //获取日志格式器
+    std::string toYamlString();                             //将日志器的配置转成YAML String
 
 private:
     std::string m_name;                         // 日志名称
