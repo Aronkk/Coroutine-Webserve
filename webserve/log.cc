@@ -496,7 +496,7 @@ void LogFormatter::init() {
                 if(m_pattern[n] == '{') {
                     str = m_pattern.substr(i + 1, n - i - 1);      // 读取 { 左边的字符，str
                     // std::cout << "*" << str << std::endl;
-                    fmt_status = 1;      //解析格式
+                    fmt_status = 1;      // string解析完毕，再解析format
                     fmt_begin = n;
                     ++n;
                     continue;
@@ -505,7 +505,7 @@ void LogFormatter::init() {
                 if(m_pattern[n] == '}') {
                     fmt = m_pattern.substr(fmt_begin + 1, n - fmt_begin - 1);    // { } 中间的字符，fmt
                     // std::cout << "#" << fmt << std::endl;
-                    fmt_status = 0;
+                    fmt_status = 0;     // format解析完毕，状态改变
                     ++n;
                     break;
                 }

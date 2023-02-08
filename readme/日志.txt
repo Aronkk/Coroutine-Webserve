@@ -1,0 +1,43 @@
+日志系统：
+
+主要的类：
+    -- LogLevel
+        日志级别level，用枚举表示，注意用逗号隔开
+        log、debug、info、warn、error、fatal
+
+    -- LogEvent
+        每个日志生成的日志事件，定义其内容，例如：文件名、行号、线程名、协程名、时间等等
+        同时要定义一个能返回各种定义值的函数，例如：getFile()、getThreadId()等等
+
+    -- LogEventWrap
+        用来获取日志事件
+
+    -- LogFormatter
+        日志格式，默认格式 "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+        日志格式会有多种，用子类进行定义
+
+    -- LogAppender
+        日志输出地，日志并不一定需要输出所有的信息，级别不同，输出的信息多少就不一样
+        因为日志的输出会有多种格式，因此将其设置为纯虚函数，由子类自行判断
+
+    -- Logger
+        日志器， 继承使得自己可以调用自己的智能指针
+        定义写日志（通过 level 进行区分）、添加、删除、清空日志、设置和返回日志级别
+        可以设置日志格式，重点：将日志器的配置转成YAML String
+    
+    -- StdoutLogAppender
+        输出到控制台的Appender
+
+    -- FileLogAppender
+        输出到文件的Appender
+
+    -- LoggerManager
+        初始化，构造，获取和转化
+
+
+
+日志格式初始化 init():
+日志的格式包括3个内容，%xxx %xxx{xxx} %%，即str，format，type
+通过遍历获取到的格式信息-pattern，进行解析
+"{"左边的字符为 str，"{}"中间的字符为 format，后面的为 type
+并且设置解析状态 fmt_status，来判断当前的解析是否发生错误，如果格式错误，则输出 error
