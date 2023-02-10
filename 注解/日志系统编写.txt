@@ -1,0 +1,39 @@
+
+日志系统的主要的类：
+    -- LogLevel
+        日志级别level，有UNKNOW、DEBUG、INFO、WARN、ERROR、FATAL
+        两个函数，str与level类型的转换
+
+    -- LogEvent
+        每个日志生成的日志事件，定义其内容
+        包括：文件名、行号、程序启动开始到现在的毫秒数、线程ID、协程ID、时间戳、线程名称、日志内容流、日志器、日志等级
+        还包含获取内容的函数，和format函数
+    
+    -- LogEventWrap
+        用来存放 LogEvent 的智能指针，即利用临时对象来打印日志
+        wrap作为临时对象，在使用完后直接析构，触发日志写入，然而日志本身的智能指针，如果声明在主函数里面，程序不结束就永远无法释放
+
+    -- LogFormatter
+        日志格式器，日志的输出有各种各样的格式，不同的日志等级输出的内容也不一样
+        默认格式 "%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
+        有一个公共子类 -FormatItem，来定义各类模板
+        函数有 init()、isError()、getPattern
+
+    -- LogAppender
+        日志输出地，目前仅考虑 stdout 和 file 两种输出
+        可以设置日志的 level 和 formatter
+
+    -- Logger
+        通过 log(level) 根据日志级别来写函数
+        可以删除、清空日志，设置日志的格式
+
+    -- StdoutLogAppender
+        输出到控制台的 Appender，继承 LogAppender
+
+    -- FileLogAppender
+        输出到文件的 Appender，继承 LogAppender
+
+    -- LoggerManager
+        日志管理器，有一个 map 容器来存放所有的日志信息，用来获取日志，初始化和转换
+
+

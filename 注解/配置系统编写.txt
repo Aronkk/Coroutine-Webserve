@@ -1,0 +1,27 @@
+
+配置系统的主要的类：
+    -- ConfigVarBase
+        配置变量的基类，主要存放公用的一些配置信息
+        -name 配置参数的名称，-m_description 配置参数的描述
+
+    -- ConfigVar
+        配置参数模板子类，保存对应类型的参数值，是一个模板类，有3个模板参数
+        第一个模板参数是类型T，表示配置项的类型。另外两个模板参数是FromStr和ToStr，这两个参数是仿函数
+        FromStr用于将YAML字符串转类型T，ToStr用于将T转YAML字符串
+        根据不同的类型T，FromStr和ToStr具有不同的偏特化实现
+
+    -- Config
+        ConfigVar的管理类，负责托管全部的ConfigVar对象，并且使用了单例模式
+        主要提供了 lookup() 函数来查找相关的参数
+
+
+配置系统主要是通过 yaml-cpp 文件来与日志系统连接
+通过修改 yaml 文件来改变日志的name，level，formater，appender
+
+
+配置模块实现的一大难点是类型转换类（仿函数）的偏特化实现
+对于每种类型的配置，在对应的ConfigVar模板类实例化时都要提供其FromStr和ToStr两个仿函数，用于实现该类型和YAML字符串的相互转换
+
+包括全部的基本数据类型（int, float, double, string等），
+以及vector/list/set/unordered_set/map/unordered_map这几个复杂数据类型
+还包括用户可能的自定义类型，这里的编写十分复杂

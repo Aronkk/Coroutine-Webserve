@@ -49,6 +49,7 @@ LogEventWrap::LogEventWrap(LogEvent::ptr e)
 }
 
 LogEventWrap::~LogEventWrap() {
+    // LogEventWrap在if语句结束后会结束生命周期调用析构函数实现打印
     m_event->getLogger()->log(m_event->getLevel(), m_event);
 }
 

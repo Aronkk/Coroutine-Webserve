@@ -48,7 +48,7 @@ protected:
 };
 
 
-// 类型转换模板类(F 源类型, T 目标类型)
+// 类型转换模板类(F from类型, T to类型)
 template<class F, class T>
 class LexicalCast {
 public:
@@ -63,6 +63,7 @@ template<class T>
 class LexicalCast<std::string, std::vector<T> > {
 public:
     std::vector<T> operator()(const std::string& v) {
+        // 将 string 类型的 v，转换成 yaml 类型的 node
         YAML::Node node = YAML::Load(v);
         typename std::vector<T> vec;
         std::stringstream ss;
@@ -365,7 +366,7 @@ public:
 private:
     RWMutexType m_mutex;
     T m_val;
-    //变更回调函数组, uint64_t key,要求唯一，一般可以用hash
+    //变更回调函数组, uint64_t key,要求唯一，on_change_cb是function函数，里面包含（old_value，new_value）
     std::map<uint64_t, on_change_cb> m_cbs;
 };
 
@@ -416,6 +417,7 @@ public:
         if(it == GetDatas().end()) {
             return nullptr;
         }
+        // 找到了就转换成对应的智能指针
         return std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
     }
 

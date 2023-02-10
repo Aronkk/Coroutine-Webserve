@@ -231,8 +231,8 @@ private:
     std::string m_name;                         // 日志名称
     LogLevel::Level m_level;                    // 日志级别
     std::list<LogAppender::ptr> m_appenders;    // Appener集合，用来存放日志信息
-    LogFormatter::ptr m_formatter;              /// 日志格式器
-    Logger::ptr m_root;                         /// 主日志器
+    LogFormatter::ptr m_formatter;              // 给定一个默认的日志格式器
+    Logger::ptr m_root;                         // 主日志器
     MutexType m_mutex;
 };
 

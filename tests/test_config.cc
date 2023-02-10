@@ -48,7 +48,7 @@ void print_yaml(const YAML::Node& node, int level) {
                 it != node.end(); ++it) {
             SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << std::string(level * 4, ' ')
                     << it->first << " - " << it->second.Type() << " - " << level;
-            print_yaml(it->second, level + 1);
+            print_yaml(it->second, level + 1);  // 这里是递归操作？
         }
     } else if(node.IsSequence()) {
         for(size_t i = 0; i < node.size(); ++i) {
@@ -61,7 +61,7 @@ void print_yaml(const YAML::Node& node, int level) {
 
 void test_yaml(){
     // 加载yaml文件，输出形式是node
-    YAML::Node root = YAML::LoadFile("/home/lwk/Sylar/bin/conf/test.yml");
+    YAML::Node root = YAML::LoadFile("/home/lwk/Coroutine-Webserve/bin/conf/test.yml");
     print_yaml(root, 0);
 
     //SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << root;
@@ -97,7 +97,7 @@ void test_config(){
     XX_M(g_str_int_map_value_config, str_int_map, before);
     XX_M(g_str_int_umap_value_config, str_int_umap, before);
 
-    YAML::Node root = YAML::LoadFile("/home/lwk/Sylar/bin/conf/test.yml");
+    YAML::Node root = YAML::LoadFile("/home/lwk/Coroutine-Webserve/bin/conf/test.yml");
     sylar::Config::LoadFromYaml(root);
 
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after : " << g_int_value_config->getValue();
@@ -197,7 +197,7 @@ void test_class(){
     XX_PM(g_person_map, "class.map before");
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "before: " << g_person_vec_map->toString();
 
-    YAML::Node root = YAML::LoadFile("/home/lwk/Sylar/bin/conf/test.yml");
+    YAML::Node root = YAML::LoadFile("/home/lwk/Coroutine-Webserve/bin/conf/test.yml");
     sylar::Config::LoadFromYaml(root);
 
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_person->getValue().toString() << " - " << g_person->toString();
@@ -210,7 +210,7 @@ void test_log(){
     static sylar::Logger::ptr system_log = SYLAR_LOG_NAME("system");
     SYLAR_LOG_INFO(system_log) << "hello system" << std::endl;
     std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
-    YAML::Node root = YAML::LoadFile("/home/lwk/Sylar/bin/conf/test.yml");
+    YAML::Node root = YAML::LoadFile("/home/lwk/Coroutine-Webserve/bin/conf/test.yml");
     sylar::Config::LoadFromYaml(root);
     std::cout << "=============" << std::endl;
     std::cout << sylar::LoggerMgr::GetInstance()->toYamlString() << std::endl;
@@ -224,9 +224,9 @@ void test_log(){
 
 int main(int argc, char** argv){
 
-    //test_yaml();
-    //test_config();
-    //test_class();
+    // test_yaml();
+    // test_config();
+    // test_class();
     test_log();
     
     sylar::Config::Visit([](sylar::ConfigVarBase::ptr var) {
