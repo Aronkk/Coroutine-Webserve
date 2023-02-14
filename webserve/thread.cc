@@ -5,7 +5,7 @@
 namespace sylar{
 
 // 定义一个静态线程局部变量，用来指向当前线程
-// 只在作用于当前线程，不影响多线程的使用
+// 只在作用于当前线程，不影响多线程的使用，所以 get 到的是 t_thread，而不是 m_thread
 static thread_local Thread* t_thread = nullptr;
 static thread_local std::string t_thread_name = "UNKNOW";
 
@@ -30,7 +30,7 @@ void Semaphore::wait(){
 }
 
 void Semaphore::notify(){
-    // 对信号量解锁，调用一次对信号量的值+1
+    // 对信号量解锁，唤醒wait中的信号量，调用一次对信号量的值+1
     if (sem_post(&m_semaphore)){
         throw std::logic_error("sem_post erroe");
     }
@@ -67,6 +67,7 @@ Thread::Thread(std::function<void()> cb, const std::string& name)
             << " name=" << name;
         throw std::logic_error("pthread_create error");
     }
+    // 利用信号量 wait，确保线程先创建成功
     m_semaphore.wait();
 }
 
@@ -106,6 +107,7 @@ void* Thread::run(void* arg) {
     std::function<void()> cb;
     cb.swap(thread->m_cb);
 
+    // 当线程 run之后，再将信号量唤醒
     thread->m_semaphore.notify();
 
     cb();
