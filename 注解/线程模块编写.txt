@@ -1,0 +1,43 @@
+
+主要有以下几个类：
+
+    -- Thread
+        线程类，构造函数传入线程入口函数和线程名称，线程入口函数类型为void()
+        在 Thread() 函数中生成线程 pthread_create()
+        在 ~Thread() 结束线程 pthread_detach() 一次只能分离一个线程
+
+        jion() 和一个已经终止的线程进行连接，回收子线程的资源
+               这个函数是阻塞函数，调用一次只回收一个子线程的资源
+               一般在主线程中使用，不需要返回值
+        
+        返回线程ID和线程名称 GetName() getName() SetName()
+
+    -- Semaphore
+        计数信号量，主要有两个函数
+        wait() 对信号量加锁，调用一次对信号量的值-1，如果值为0，就阻塞
+        notify() 对信号量解锁，调用一次对信号量的值+1
+
+    // 在锁这里都构造了 局部变量 的锁
+    // 因为局部变量在函数执行完之后会自动释放掉
+    // 这就保证了加锁之后忘记解锁，出现死锁的问题
+
+    -- Mutex
+        互斥量
+        pthread_mutex_lock() 加锁
+        pthread_mutex_unlock() 解锁
+
+    -- RWMutex
+        读写锁
+        pthread_rwlock_rdlock() 加读锁
+        pthread_rwlock_wrlock() 加写锁
+        pthread_rwlock_unlock() 解锁
+
+    -- Spinlock
+        自旋锁 -- 只有非常清楚自己在干什么，并且锁阻塞时间能够准确估计的时候才使用
+        pthread_spin_lock() 加锁
+        pthread_spin_unlock() 解锁
+
+    -- CASLock
+        原子锁
+
+
