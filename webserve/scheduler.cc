@@ -92,6 +92,8 @@ void Scheduler::start() {
 }
 
 // stop：当协程不在运行状态时，需要进入循环等待的状态
+// 1.use_caller为true，当所有的调度协程都结束后，再解说调度协程
+// 2.use_caller为false，有单独的线程用来协程调度，停止调度，线程都会推出
 void Scheduler::stop() {
     m_autoStop = true;
     if(m_rootFiber
@@ -108,7 +110,7 @@ void Scheduler::stop() {
         }
     }
 
-    //bool exit_on_this_fiber = false;
+    // bool exit_on_this_fiber = false;
     // m_rootThread（主线程）!= -1，说明该线程可以被调度
     if(m_rootThread != -1) {
         SYLAR_ASSERT(GetThis() == this);
@@ -188,7 +190,6 @@ void Scheduler::run() {
             while(it != m_fibers.end()) {
                 // 如果任务已经指定由某个线程执行，或者run的线程不是当前线程，那就忽略不执行
                 // 因为协程的唤醒是抢占的，抢到信号的那个协程不一定是我们需要的，因此还需要通知其他协程继续抢占
-                // 为什么要指定协程，不应该是哪个协程空闲哪个就去执行吗？
                 if(it->thread != -1 && it->thread != sylar::GetThreadId()) {
                     ++it;
                     tickle_me = true;
@@ -196,6 +197,7 @@ void Scheduler::run() {
                 }
 
                 SYLAR_ASSERT(it->fiber || it->cb);
+                // 如果这个协程正在执行状态，那也跳过
                 // 为什么还会有正在执行的状态啊？
                 if(it->fiber && it->fiber->getState() == Fiber::EXEC) {
                     ++it;
@@ -245,11 +247,10 @@ void Scheduler::run() {
             if(cb_fiber->getState() == Fiber::READY) {
                 schedule(cb_fiber);
                 cb_fiber.reset();
-                // 为什么函数的这些状态不需要变成 hold ？
             } else if(cb_fiber->getState() == Fiber::EXCEPT
                     || cb_fiber->getState() == Fiber::TERM) {
                 cb_fiber->reset(nullptr);
-            } else {//if(cb_fiber->getState() != Fiber::TERM) {
+            } else {
                 cb_fiber->m_state = Fiber::HOLD;
                 cb_fiber.reset();
             }
@@ -280,6 +281,7 @@ void Scheduler::tickle() {
     SYLAR_LOG_INFO(g_logger) << "tickle";
 }
 
+// 表明协程是否都执行完成
 bool Scheduler::stopping() {
     MutexType::Lock lock(m_mutex);
     return m_autoStop && m_stopping

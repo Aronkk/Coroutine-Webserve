@@ -25,7 +25,7 @@ private:
 
         // 事件上线文类，事件可能有好几种，进行实例化
         struct EventContext {    
-            Scheduler* scheduler = nullptr;     // 事件执行的调度器
+            Scheduler* scheduler = nullptr;     // 事件执行的调度器，可能有多个调度器
             Fiber::ptr fiber;                   // 事件协程
             std::function<void()> cb;           // 事件的回调函数
         };
@@ -53,12 +53,12 @@ private:
         EventContext write;     // 写事件上下文
         int fd = 0;             // 事件关联的句柄  
         Event events = NONE;    // 当前的事件
-        MutexType mutex;        // 事件的Mutex
+        MutexType mutex;        // 事件的Mutex，用互斥锁
     };
 
 public:
     /**
-     * @brief 构造函数
+     * @brief 构造函数，和scheduler一样
      * @param[in] threads 线程数量
      * @param[in] use_caller 是否将调用线程包含进去
      * @param[in] name 调度器的名称
@@ -88,7 +88,7 @@ public:
      * @brief 取消事件
      * @param[in] fd socket句柄
      * @param[in] event 事件类型
-     * @attention 如果事件存在则触发事件
+     * @attention 如果事件存在则强制触发事件
      */
     bool cancelEvent(int fd, Event event);
 
@@ -100,6 +100,7 @@ public:
 
     // 返回当前的IOManager
     static IOManager* GetThis();
+    
 protected:
     void tickle() override;
     bool stopping() override;

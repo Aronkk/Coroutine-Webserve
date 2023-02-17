@@ -25,7 +25,7 @@ static ConfigVar<uint32_t>::ptr g_fiber_stack_size =
     Config::Lookup<uint32_t>("fiber.stack_size", 128 * 1024, "fiber stack size");
 
 
-// 内存分配器
+// 内存分配器，协程内存的大小是可以用户自定义的
 class MallocStackAllocator {
 public:
     // 分配内存
@@ -75,6 +75,7 @@ Fiber::Fiber(std::function<void()> cb, size_t stacksize, bool use_caller)
     // 栈的生成
     m_stack = StackAllocator::Alloc(m_stacksize);
     if(getcontext(&m_ctx)) {
+        // assert 判断获取上下文是否成功
         SYLAR_ASSERT2(false, "getcontext");
     }
     // uc_link 保存当前函数结束后继续执行的函数，如果设为NULL，则表示当前结束后进程退出
@@ -118,9 +119,9 @@ Fiber::~Fiber() {
 }
 
 // 重置协程函数（协程状态为INIT，TERM, EXCEPT，才能重置），并重置状态，
-// 一个函数在执行完后，不回收其内存空间，而是重新指向其他的协程
+// 一个函数在执行完后，不回收其内存空间，而是初始化之后重新指向其他的协程
 void Fiber::reset(std::function<void()> cb) {
-    // 函数要reset，首先栈不能为空，其次状态为终止/异常/初始化
+    // 函数要reset，首先栈不能为空（不能是 main_fiber），其次状态为终止/异常/初始化
     SYLAR_ASSERT(m_stack);
     SYLAR_ASSERT(m_state == TERM
             || m_state == EXCEPT
@@ -186,7 +187,7 @@ void Fiber::SetThis(Fiber* f) {
     t_fiber = f;
 }
 
-// 返回当前正在执行的协程(智能指针)
+// 返回当前正在执行的协程(智能指针)，默认构造
 // 该协程为当前线程的主协程，其他协程都通过这个协程来调度，也就是说，其他协程
 // 结束时,都要切回到主协程，由主协程重新选择新的协程进行resume
 Fiber::ptr Fiber:: GetThis() {
@@ -244,7 +245,8 @@ void Fiber::MainFunc() {
             << sylar::BacktraceToString();
     }
 
-    // 获取当前协程的指针，先释放掉，再进行 swapout 切换
+    // 子线程执行完了会自动回到主线程，但是子协程不会，因此需要手动返回 
+    // 获取当前协程的指针，先释放掉，再进行 swapout 切换。（这里不就相当是野指针吗）
     auto raw_ptr = cur.get();
     cur.reset();
     raw_ptr->swapOut();

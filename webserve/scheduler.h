@@ -49,7 +49,6 @@ public:
     void stop();
 
     // 调度协程 -- （fc 协程或函数，thread 协程执行的线程id,-1标识任意线程)
-    // 为什么这里要上锁？上锁完在哪里解锁？
     template<class FiberOrCb>
     void schedule(FiberOrCb fc, int thread = -1) {
         bool need_tickle = false;
@@ -106,15 +105,17 @@ private:
     // 协程调度启动(无锁)，将可用的协程放到任务队列中去，返回值bool类型相当于消息提醒
     template<class FiberOrCb>
     bool scheduleNoLock(FiberOrCb fc, int thread) {
-        // need_tickle 提醒是否有可调度的协程
+        // need_tickle 提醒是否有可调度的协程，ture 为空，false 为有可调度协程
         bool need_tickle = m_fibers.empty();
         FiberAndThread ft(fc, thread);
+        // 这里是判断什么？
         if(ft.fiber || ft.cb) {
             m_fibers.push_back(ft);
         }
         // std::cout<<"消息队列的大小："<<m_fibers.size()<<std::endl;
         return need_tickle;
     }
+
 private:
     // 调度器可以执行的对象，协程/函数/线程组，struct默认都是public
     // 这里相当于初始化或者说包装
@@ -163,6 +164,7 @@ private:
             thread = -1;
         }
     };
+
 private:  
     MutexType m_mutex;                      // 互斥量
     std::vector<Thread::ptr> m_threads;     // 线程池   
