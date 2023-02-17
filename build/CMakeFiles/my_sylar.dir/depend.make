@@ -91,6 +91,7 @@ CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/macro.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/scheduler.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/thread.h
+CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/timer.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/util.h
 
 CMakeFiles/my_sylar.dir/webserve/log.cc.o: .././webserve/log.h
@@ -149,6 +150,11 @@ CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/thread.cc
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/util.h
+
+CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/thread.h
+CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/timer.cc
+CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/timer.h
+CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/util.h
 
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/log.h

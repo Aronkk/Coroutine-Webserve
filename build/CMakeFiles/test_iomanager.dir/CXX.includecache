@@ -51,6 +51,8 @@ ucontext.h
 .././webserve/iomanager.h
 scheduler.h
 .././webserve/scheduler.h
+timer.h
+.././webserve/timer.h
 
 .././webserve/log.h
 iostream
@@ -137,6 +139,16 @@ stdint.h
 -
 atomic
 -
+
+.././webserve/timer.h
+memory
+-
+vector
+-
+set
+-
+thread.h
+.././webserve/thread.h
 
 .././webserve/util.h
 iostream

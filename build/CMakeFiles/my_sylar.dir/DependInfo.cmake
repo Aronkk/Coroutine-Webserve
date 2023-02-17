@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lwk/Coroutine-Webserve/webserve/log.cc" "/home/lwk/Coroutine-Webserve/build/CMakeFiles/my_sylar.dir/webserve/log.cc.o"
   "/home/lwk/Coroutine-Webserve/webserve/scheduler.cc" "/home/lwk/Coroutine-Webserve/build/CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o"
   "/home/lwk/Coroutine-Webserve/webserve/thread.cc" "/home/lwk/Coroutine-Webserve/build/CMakeFiles/my_sylar.dir/webserve/thread.cc.o"
+  "/home/lwk/Coroutine-Webserve/webserve/timer.cc" "/home/lwk/Coroutine-Webserve/build/CMakeFiles/my_sylar.dir/webserve/timer.cc.o"
   "/home/lwk/Coroutine-Webserve/webserve/util.cc" "/home/lwk/Coroutine-Webserve/build/CMakeFiles/my_sylar.dir/webserve/util.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

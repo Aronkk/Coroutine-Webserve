@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o"
   "CMakeFiles/my_sylar.dir/webserve/log.cc.o"
   "CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o"
+  "CMakeFiles/my_sylar.dir/webserve/timer.cc.o"
   "CMakeFiles/my_sylar.dir/webserve/thread.cc.o"
   "CMakeFiles/my_sylar.dir/webserve/util.cc.o"
   "../lib/libmy_sylar.pdb"

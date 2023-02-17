@@ -347,7 +347,7 @@ void IOManager::tickle() {
 }
 
 bool IOManager::stopping(uint64_t& timeout) {
-    // timeout = getNextTimer();
+    timeout = getNextTimer();
     return timeout == ~0ull
         && m_pendingEventCount == 0
         && Scheduler::stopping();
@@ -358,11 +358,12 @@ bool IOManager::stopping() {
     return stopping(timeout);
 }
 
+// 主要用 epoll_wait 来处理
 void IOManager::idle() {
     SYLAR_LOG_DEBUG(g_logger) << "idle";
     const uint64_t MAX_EVNETS = 256;
     epoll_event* events = new epoll_event[MAX_EVNETS]();
-    // 用智能指针，方便释放
+    // 用智能指针，方便释放上面创建的 events 数组
     std::shared_ptr<epoll_event> shared_events(events, [](epoll_event* ptr){
         delete[] ptr;
     });
@@ -396,16 +397,16 @@ void IOManager::idle() {
         } while(true);
 
         std::vector<std::function<void()> > cbs;
-        // listExpiredCb(cbs);
+        listExpiredCb(cbs);
         if(!cbs.empty()) {
             //SYLAR_LOG_DEBUG(g_logger) << "on timer cbs.size=" << cbs.size();
             schedule(cbs.begin(), cbs.end());
             cbs.clear();
         }
 
-        //if(SYLAR_UNLIKELY(rt == MAX_EVNETS)) {
+        // if(SYLAR_UNLIKELY(rt == MAX_EVNETS)) {
         //    SYLAR_LOG_INFO(g_logger) << "epoll wait events=" << rt;
-        //}
+        // }
 
         // rt 是epoll_wait得到的文件的长度，这里进行遍历读取
         for(int i = 0; i < rt; ++i) {
@@ -413,19 +414,23 @@ void IOManager::idle() {
             // 这里说明外部往读缓冲区发了信息，所以要循环读取消息
             if(event.data.fd == m_tickleFds[0]) {
                 uint8_t dummy[256];
+                // 由于是边沿触发，需要将触发事件全部处理干净
                 while(read(m_tickleFds[0], dummy, sizeof(dummy)) > 0);
                 continue;
             }
 
             FdContext* fd_ctx = (FdContext*)event.data.ptr;
             FdContext::MutexType::Lock lock(fd_ctx->mutex);
+            // 如果是 错误 或者 中断，就要换成 读写事件
             if(event.events & (EPOLLERR | EPOLLHUP)) {
                 event.events |= (EPOLLIN | EPOLLOUT) & fd_ctx->events;
             }
             int real_events = NONE;
+            // 读事件
             if(event.events & EPOLLIN) {
                 real_events |= READ;
             }
+            // 写事件
             if(event.events & EPOLLOUT) {
                 real_events |= WRITE;
             }
@@ -467,8 +472,8 @@ void IOManager::idle() {
     }
 }
 
-// void IOManager::onTimerInsertedAtFront() {
-//     tickle();
-// }
+void IOManager::onTimerInsertedAtFront() {
+    tickle();
+}
 
 }

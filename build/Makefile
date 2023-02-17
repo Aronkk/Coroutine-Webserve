@@ -565,6 +565,33 @@ webserve/thread.cc.s:
 	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/thread.cc.s
 .PHONY : webserve/thread.cc.s
 
+webserve/timer.o: webserve/timer.cc.o
+
+.PHONY : webserve/timer.o
+
+# target to build an object file
+webserve/timer.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/timer.cc.o
+.PHONY : webserve/timer.cc.o
+
+webserve/timer.i: webserve/timer.cc.i
+
+.PHONY : webserve/timer.i
+
+# target to preprocess a source file
+webserve/timer.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/timer.cc.i
+.PHONY : webserve/timer.cc.i
+
+webserve/timer.s: webserve/timer.cc.s
+
+.PHONY : webserve/timer.s
+
+# target to generate assembly for a file
+webserve/timer.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/timer.cc.s
+.PHONY : webserve/timer.cc.s
+
 webserve/util.o: webserve/util.cc.o
 
 .PHONY : webserve/util.o
@@ -647,6 +674,9 @@ help:
 	@echo "... webserve/thread.o"
 	@echo "... webserve/thread.i"
 	@echo "... webserve/thread.s"
+	@echo "... webserve/timer.o"
+	@echo "... webserve/timer.i"
+	@echo "... webserve/timer.s"
 	@echo "... webserve/util.o"
 	@echo "... webserve/util.i"
 	@echo "... webserve/util.s"

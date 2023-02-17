@@ -9,6 +9,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/scheduler
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/singleton.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/sylar.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/thread.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/timer.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/util.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../tests/test_iomanager.cc
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/binary.h

@@ -22,6 +22,7 @@ set(LIB_SRC
     webserve/iomanager.cc
     webserve/log.cc
     webserve/scheduler.cc
+    webserve/timer.cc
     webserve/thread.cc
     webserve/util.cc
     )
