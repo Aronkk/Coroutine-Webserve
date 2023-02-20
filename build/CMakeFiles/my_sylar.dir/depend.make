@@ -4,6 +4,7 @@
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/config.h
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/noncopyable.h
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/util.h
@@ -40,7 +41,15 @@ CMakeFiles/my_sylar.dir/webserve/config.cc.o: /home/lwk/apps/yaml-cpp-master/inc
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/traits.h
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
 
+CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o: ../webserve/fd_manager.cc
+CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o: ../webserve/fd_manager.h
+CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o: ../webserve/hook.h
+CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o: ../webserve/noncopyable.h
+CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o: ../webserve/singleton.h
+CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o: ../webserve/thread.h
+
 CMakeFiles/my_sylar.dir/webserve/fiber.cc.o: .././webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/fiber.cc.o: .././webserve/noncopyable.h
 CMakeFiles/my_sylar.dir/webserve/fiber.cc.o: .././webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/fiber.cc.o: ../webserve/config.h
 CMakeFiles/my_sylar.dir/webserve/fiber.cc.o: ../webserve/fiber.cc
@@ -83,11 +92,60 @@ CMakeFiles/my_sylar.dir/webserve/fiber.cc.o: /home/lwk/apps/yaml-cpp-master/incl
 CMakeFiles/my_sylar.dir/webserve/fiber.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/traits.h
 CMakeFiles/my_sylar.dir/webserve/fiber.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
 
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: .././webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: .././webserve/noncopyable.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: .././webserve/thread.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/config.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/fd_manager.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/fiber.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/hook.cc
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/hook.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/iomanager.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/macro.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/scheduler.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/singleton.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/thread.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/timer.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: ../webserve/util.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/binary.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/dll.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitter.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitterdef.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emittermanip.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitterstyle.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/exceptions.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/mark.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/convert.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/impl.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/iterator.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/iterator_fwd.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/memory.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_data.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_iterator.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_ref.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/emit.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/impl.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/iterator.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/node.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/parse.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/ptr.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/type.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/noexcept.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/null.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/ostream_wrapper.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/parser.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/stlemitter.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/traits.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
+
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/iomanager.cc
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/iomanager.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/log.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/macro.h
+CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/noncopyable.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/scheduler.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/thread.h
@@ -100,6 +158,7 @@ CMakeFiles/my_sylar.dir/webserve/log.cc.o: ../webserve/config.h
 CMakeFiles/my_sylar.dir/webserve/log.cc.o: ../webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/log.cc.o: ../webserve/log.cc
 CMakeFiles/my_sylar.dir/webserve/log.cc.o: ../webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/log.cc.o: ../webserve/noncopyable.h
 CMakeFiles/my_sylar.dir/webserve/log.cc.o: ../webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/log.cc.o: ../webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/log.cc.o: ../webserve/util.h
@@ -136,8 +195,10 @@ CMakeFiles/my_sylar.dir/webserve/log.cc.o: /home/lwk/apps/yaml-cpp-master/includ
 CMakeFiles/my_sylar.dir/webserve/log.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
 
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/fiber.h
+CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/hook.h
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/log.h
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/macro.h
+CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/noncopyable.h
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/scheduler.cc
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/scheduler.h
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/singleton.h
@@ -146,11 +207,13 @@ CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/util.h
 
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/noncopyable.h
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/thread.cc
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/util.h
 
+CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/noncopyable.h
 CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/timer.cc
 CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/timer.h
@@ -158,6 +221,7 @@ CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/util.h
 
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/noncopyable.h
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/util.cc

@@ -18,7 +18,9 @@ link_directories(/home/lwk/Coroutine-Webserve/lib)
 # 将下面的 .cc 文件，统称为 LIB_SRC 变量
 set(LIB_SRC
     webserve/config.cc
+    webserve/fd_manager.cc
     webserve/fiber.cc
+    webserve/hook.cc
     webserve/iomanager.cc
     webserve/log.cc
     webserve/scheduler.cc
@@ -36,6 +38,7 @@ force_redefine_file_macro_for_sources(my_sylar) #__FILE__
 
 set(LIB_LIB
     my_sylar
+    dl
     pthread
     yaml-cpp
 )
@@ -75,6 +78,11 @@ target_link_libraries(test_scheduler ${LIB_LIB})
 add_executable(test_iomanager tests/test_iomanager.cc)
 force_redefine_file_macro_for_sources(test_iomanager) #__FILE__
 target_link_libraries(test_iomanager ${LIB_LIB})
+
+
+add_executable(test_hook tests/test_hook.cc)
+force_redefine_file_macro_for_sources(test_hook) #__FILE__
+target_link_libraries(test_hook ${LIB_LIB})
 
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

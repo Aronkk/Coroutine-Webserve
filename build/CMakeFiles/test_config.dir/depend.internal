@@ -5,6 +5,7 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o
  .././webserve/config.h
  .././webserve/fiber.h
  .././webserve/log.h
+ .././webserve/noncopyable.h
  .././webserve/singleton.h
  .././webserve/thread.h
  .././webserve/util.h

@@ -6,6 +6,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
  .././webserve/fiber.h
  .././webserve/iomanager.h
  .././webserve/log.h
+ .././webserve/noncopyable.h
  .././webserve/scheduler.h
  .././webserve/singleton.h
  .././webserve/sylar.h

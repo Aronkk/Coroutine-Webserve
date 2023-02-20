@@ -5,6 +5,7 @@ CMakeFiles/test_util.dir/tests/test_util.cc.o: .././webserve/config.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: .././webserve/fiber.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: .././webserve/log.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: .././webserve/macro.h
+CMakeFiles/test_util.dir/tests/test_util.cc.o: .././webserve/noncopyable.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: .././webserve/scheduler.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: .././webserve/singleton.h
 CMakeFiles/test_util.dir/tests/test_util.cc.o: .././webserve/sylar.h

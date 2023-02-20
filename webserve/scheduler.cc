@@ -1,7 +1,7 @@
 #include "scheduler.h"
 #include "log.h"
 #include "macro.h"
-// #include "hook.h"
+#include "hook.h"
 
 namespace sylar {
 
@@ -164,7 +164,7 @@ void Scheduler::setThis() {
 // 线程进行 run，从协程队列里取协程执行任务 
 void Scheduler::run() {
     SYLAR_LOG_DEBUG(g_logger) << m_name << " run";
-    // set_hook_enable(true);
+    set_hook_enable(true);
     // 获取当前线程的协程调度器 -- t_scheduler
     setThis();
     // std::cout<<"hello world  "<<sylar::GetFiberId()<<std::endl;

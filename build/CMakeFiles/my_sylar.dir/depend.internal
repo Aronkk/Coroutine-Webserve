@@ -5,6 +5,7 @@ CMakeFiles/my_sylar.dir/webserve/config.cc.o
  .././webserve/config.h
  .././webserve/fiber.h
  .././webserve/log.h
+ .././webserve/noncopyable.h
  .././webserve/singleton.h
  .././webserve/thread.h
  .././webserve/util.h
@@ -40,8 +41,16 @@ CMakeFiles/my_sylar.dir/webserve/config.cc.o
  /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/stlemitter.h
  /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/traits.h
  /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
+CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o
+ /home/lwk/Coroutine-Webserve/webserve/fd_manager.cc
+ /home/lwk/Coroutine-Webserve/webserve/fd_manager.h
+ /home/lwk/Coroutine-Webserve/webserve/hook.h
+ /home/lwk/Coroutine-Webserve/webserve/noncopyable.h
+ /home/lwk/Coroutine-Webserve/webserve/singleton.h
+ /home/lwk/Coroutine-Webserve/webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/fiber.cc.o
  .././webserve/log.h
+ .././webserve/noncopyable.h
  .././webserve/thread.h
  /home/lwk/Coroutine-Webserve/webserve/config.h
  /home/lwk/Coroutine-Webserve/webserve/fiber.cc
@@ -83,12 +92,61 @@ CMakeFiles/my_sylar.dir/webserve/fiber.cc.o
  /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/stlemitter.h
  /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/traits.h
  /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
+CMakeFiles/my_sylar.dir/webserve/hook.cc.o
+ .././webserve/log.h
+ .././webserve/noncopyable.h
+ .././webserve/thread.h
+ /home/lwk/Coroutine-Webserve/webserve/config.h
+ /home/lwk/Coroutine-Webserve/webserve/fd_manager.h
+ /home/lwk/Coroutine-Webserve/webserve/fiber.h
+ /home/lwk/Coroutine-Webserve/webserve/hook.cc
+ /home/lwk/Coroutine-Webserve/webserve/hook.h
+ /home/lwk/Coroutine-Webserve/webserve/iomanager.h
+ /home/lwk/Coroutine-Webserve/webserve/log.h
+ /home/lwk/Coroutine-Webserve/webserve/macro.h
+ /home/lwk/Coroutine-Webserve/webserve/scheduler.h
+ /home/lwk/Coroutine-Webserve/webserve/singleton.h
+ /home/lwk/Coroutine-Webserve/webserve/thread.h
+ /home/lwk/Coroutine-Webserve/webserve/timer.h
+ /home/lwk/Coroutine-Webserve/webserve/util.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/binary.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/dll.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitter.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitterdef.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emittermanip.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitterstyle.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/exceptions.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/mark.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/convert.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/impl.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/iterator.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/iterator_fwd.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/memory.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_data.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_iterator.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_ref.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/emit.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/impl.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/iterator.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/node.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/parse.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/ptr.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/type.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/noexcept.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/null.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/ostream_wrapper.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/parser.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/stlemitter.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/traits.h
+ /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o
  /home/lwk/Coroutine-Webserve/webserve/fiber.h
  /home/lwk/Coroutine-Webserve/webserve/iomanager.cc
  /home/lwk/Coroutine-Webserve/webserve/iomanager.h
  /home/lwk/Coroutine-Webserve/webserve/log.h
  /home/lwk/Coroutine-Webserve/webserve/macro.h
+ /home/lwk/Coroutine-Webserve/webserve/noncopyable.h
  /home/lwk/Coroutine-Webserve/webserve/scheduler.h
  /home/lwk/Coroutine-Webserve/webserve/singleton.h
  /home/lwk/Coroutine-Webserve/webserve/thread.h
@@ -101,6 +159,7 @@ CMakeFiles/my_sylar.dir/webserve/log.cc.o
  /home/lwk/Coroutine-Webserve/webserve/fiber.h
  /home/lwk/Coroutine-Webserve/webserve/log.cc
  /home/lwk/Coroutine-Webserve/webserve/log.h
+ /home/lwk/Coroutine-Webserve/webserve/noncopyable.h
  /home/lwk/Coroutine-Webserve/webserve/singleton.h
  /home/lwk/Coroutine-Webserve/webserve/thread.h
  /home/lwk/Coroutine-Webserve/webserve/util.h
@@ -137,8 +196,10 @@ CMakeFiles/my_sylar.dir/webserve/log.cc.o
  /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o
  /home/lwk/Coroutine-Webserve/webserve/fiber.h
+ /home/lwk/Coroutine-Webserve/webserve/hook.h
  /home/lwk/Coroutine-Webserve/webserve/log.h
  /home/lwk/Coroutine-Webserve/webserve/macro.h
+ /home/lwk/Coroutine-Webserve/webserve/noncopyable.h
  /home/lwk/Coroutine-Webserve/webserve/scheduler.cc
  /home/lwk/Coroutine-Webserve/webserve/scheduler.h
  /home/lwk/Coroutine-Webserve/webserve/singleton.h
@@ -147,11 +208,13 @@ CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o
  /home/lwk/Coroutine-Webserve/webserve/fiber.h
  /home/lwk/Coroutine-Webserve/webserve/log.h
+ /home/lwk/Coroutine-Webserve/webserve/noncopyable.h
  /home/lwk/Coroutine-Webserve/webserve/singleton.h
  /home/lwk/Coroutine-Webserve/webserve/thread.cc
  /home/lwk/Coroutine-Webserve/webserve/thread.h
  /home/lwk/Coroutine-Webserve/webserve/util.h
 CMakeFiles/my_sylar.dir/webserve/timer.cc.o
+ /home/lwk/Coroutine-Webserve/webserve/noncopyable.h
  /home/lwk/Coroutine-Webserve/webserve/thread.h
  /home/lwk/Coroutine-Webserve/webserve/timer.cc
  /home/lwk/Coroutine-Webserve/webserve/timer.h
@@ -159,6 +222,7 @@ CMakeFiles/my_sylar.dir/webserve/timer.cc.o
 CMakeFiles/my_sylar.dir/webserve/util.cc.o
  /home/lwk/Coroutine-Webserve/webserve/fiber.h
  /home/lwk/Coroutine-Webserve/webserve/log.h
+ /home/lwk/Coroutine-Webserve/webserve/noncopyable.h
  /home/lwk/Coroutine-Webserve/webserve/singleton.h
  /home/lwk/Coroutine-Webserve/webserve/thread.h
  /home/lwk/Coroutine-Webserve/webserve/util.cc

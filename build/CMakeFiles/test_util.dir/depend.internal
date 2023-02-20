@@ -6,6 +6,7 @@ CMakeFiles/test_util.dir/tests/test_util.cc.o
  .././webserve/fiber.h
  .././webserve/log.h
  .././webserve/macro.h
+ .././webserve/noncopyable.h
  .././webserve/scheduler.h
  .././webserve/singleton.h
  .././webserve/sylar.h

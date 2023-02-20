@@ -4,6 +4,7 @@
 CMakeFiles/test_log.dir/tests/test_log.cc.o
  .././webserve/fiber.h
  .././webserve/log.h
+ .././webserve/noncopyable.h
  .././webserve/singleton.h
  .././webserve/thread.h
  .././webserve/util.h

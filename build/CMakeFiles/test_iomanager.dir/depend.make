@@ -5,6 +5,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/config.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/fiber.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/iomanager.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/log.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/noncopyable.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/scheduler.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/singleton.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: .././webserve/sylar.h

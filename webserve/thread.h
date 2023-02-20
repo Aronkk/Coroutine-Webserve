@@ -9,21 +9,21 @@
 #include <semaphore.h>
 #include <stdint.h>
 #include <atomic>
-
+#include "noncopyable.h"
 
 namespace sylar{
 
-class Semaphore{
+class Semaphore : Noncopyable{
 public:
     Semaphore(uint32_t count = 0);
     ~Semaphore();
 
     void wait();
     void notify();
-private:
-    Semaphore(const Semaphore&) = delete;
-    Semaphore(const Semaphore&&) = delete;
-    Semaphore operator=(const Semaphore&) = delete;
+// private:
+//     Semaphore(const Semaphore&) = delete;
+//     Semaphore(const Semaphore&&) = delete;
+//     Semaphore operator=(const Semaphore&) = delete;
 private:
     sem_t m_semaphore;
 };
@@ -129,7 +129,7 @@ private:
 };
 
 // 互斥量
-class Mutex {
+class Mutex : Noncopyable {
 public: 
     // 局部锁
     typedef ScopedLockImpl<Mutex> Lock;
@@ -156,7 +156,7 @@ private:
 };
 
 // 空锁(用于调试)，空锁比不加锁的写入速度要快将近20倍，需要进行优化
-class NullMutex {
+class NullMutex : Noncopyable {
 public:
     typedef ScopedLockImpl<NullMutex> Lock;
     NullMutex() {}
@@ -166,7 +166,7 @@ public:
 };
 
 // 读写互斥量
-class RWMutex {
+class RWMutex : Noncopyable {
 public:
 
     typedef ReadScopedLockImpl<RWMutex> ReadLock;       // 局部读锁
@@ -199,7 +199,7 @@ private:
 };
 
 // 空读写锁(用于调试)
-class NullRWMutex {
+class NullRWMutex : Noncopyable {
 public:
     typedef ReadScopedLockImpl<NullMutex> ReadLock;
     typedef WriteScopedLockImpl<NullMutex> WriteLock;
@@ -210,7 +210,7 @@ public:
     void unlock() {}
 };
 
-class Thread{
+class Thread {
 public:
     typedef std::shared_ptr<Thread> ptr;
     Thread(std::function<void()> cb, const std::string& name);
@@ -241,7 +241,7 @@ private:
 };
 
 // 自旋锁 -- 只有非常清楚自己在干什么，并且锁阻塞时间能够准确估计的时候才使用
-class Spinlock{
+class Spinlock : Noncopyable{
 public:
     typedef ScopedLockImpl<Spinlock> Lock;
 
@@ -266,7 +266,7 @@ private:
 };
 
 // 原子锁
-class CASLock{
+class CASLock : Noncopyable{
 public:
     typedef ScopedLockImpl<CASLock> Lock;
 

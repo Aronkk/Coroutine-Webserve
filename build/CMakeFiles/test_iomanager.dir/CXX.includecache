@@ -88,6 +88,8 @@ thread.h
 fiber.h
 .././webserve/fiber.h
 
+.././webserve/noncopyable.h
+
 .././webserve/scheduler.h
 memory
 -
@@ -139,6 +141,8 @@ stdint.h
 -
 atomic
 -
+noncopyable.h
+.././webserve/noncopyable.h
 
 .././webserve/timer.h
 memory

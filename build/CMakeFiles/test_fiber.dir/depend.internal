@@ -5,6 +5,7 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o
  .././webserve/config.h
  .././webserve/fiber.h
  .././webserve/log.h
+ .././webserve/noncopyable.h
  .././webserve/scheduler.h
  .././webserve/singleton.h
  .././webserve/sylar.h

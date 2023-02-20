@@ -4,6 +4,7 @@
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/config.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/fiber.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/log.h
+CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/noncopyable.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/scheduler.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/singleton.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/sylar.h

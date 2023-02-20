@@ -82,6 +82,8 @@ thread.h
 fiber.h
 .././webserve/fiber.h
 
+.././webserve/noncopyable.h
+
 .././webserve/singleton.h
 memory
 -
@@ -103,6 +105,8 @@ stdint.h
 -
 atomic
 -
+noncopyable.h
+.././webserve/noncopyable.h
 
 .././webserve/util.h
 iostream
@@ -160,6 +164,28 @@ webserve/log.h
 webserve/thread.h
 /home/lwk/Coroutine-Webserve/webserve/webserve/thread.h
 
+/home/lwk/Coroutine-Webserve/webserve/fd_manager.cc
+fd_manager.h
+/home/lwk/Coroutine-Webserve/webserve/fd_manager.h
+hook.h
+/home/lwk/Coroutine-Webserve/webserve/hook.h
+sys/types.h
+-
+sys/stat.h
+-
+unistd.h
+-
+
+/home/lwk/Coroutine-Webserve/webserve/fd_manager.h
+memory
+-
+vector
+-
+thread.h
+/home/lwk/Coroutine-Webserve/webserve/thread.h
+singleton.h
+/home/lwk/Coroutine-Webserve/webserve/singleton.h
+
 /home/lwk/Coroutine-Webserve/webserve/fiber.cc
 fiber.h
 /home/lwk/Coroutine-Webserve/webserve/fiber.h
@@ -180,6 +206,40 @@ memory
 functional
 -
 ucontext.h
+-
+
+/home/lwk/Coroutine-Webserve/webserve/hook.cc
+hook.h
+/home/lwk/Coroutine-Webserve/webserve/hook.h
+config.h
+/home/lwk/Coroutine-Webserve/webserve/config.h
+log.h
+/home/lwk/Coroutine-Webserve/webserve/log.h
+fiber.h
+/home/lwk/Coroutine-Webserve/webserve/fiber.h
+iomanager.h
+/home/lwk/Coroutine-Webserve/webserve/iomanager.h
+fd_manager.h
+/home/lwk/Coroutine-Webserve/webserve/fd_manager.h
+macro.h
+/home/lwk/Coroutine-Webserve/webserve/macro.h
+dlfcn.h
+-
+
+/home/lwk/Coroutine-Webserve/webserve/hook.h
+fcntl.h
+-
+sys/ioctl.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+stdint.h
+-
+time.h
+-
+unistd.h
 -
 
 /home/lwk/Coroutine-Webserve/webserve/iomanager.cc
@@ -256,6 +316,8 @@ log.h
 util.h
 /home/lwk/Coroutine-Webserve/webserve/util.h
 
+/home/lwk/Coroutine-Webserve/webserve/noncopyable.h
+
 /home/lwk/Coroutine-Webserve/webserve/scheduler.cc
 scheduler.h
 /home/lwk/Coroutine-Webserve/webserve/scheduler.h
@@ -263,6 +325,8 @@ log.h
 /home/lwk/Coroutine-Webserve/webserve/log.h
 macro.h
 /home/lwk/Coroutine-Webserve/webserve/macro.h
+hook.h
+/home/lwk/Coroutine-Webserve/webserve/hook.h
 
 /home/lwk/Coroutine-Webserve/webserve/scheduler.h
 memory
@@ -307,6 +371,8 @@ stdint.h
 -
 atomic
 -
+noncopyable.h
+/home/lwk/Coroutine-Webserve/webserve/noncopyable.h
 
 /home/lwk/Coroutine-Webserve/webserve/timer.cc
 timer.h

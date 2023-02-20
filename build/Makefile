@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
 # Target rules for targets named test_iomanager
 
 # Build rule for target.
@@ -267,6 +280,33 @@ tests/test_fiber.s: tests/test_fiber.cc.s
 tests/test_fiber.cc.s:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
+
+tests/test_hook.o: tests/test_hook.cc.o
+
+.PHONY : tests/test_hook.o
+
+# target to build an object file
+tests/test_hook.cc.o:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.o
+.PHONY : tests/test_hook.cc.o
+
+tests/test_hook.i: tests/test_hook.cc.i
+
+.PHONY : tests/test_hook.i
+
+# target to preprocess a source file
+tests/test_hook.cc.i:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.i
+.PHONY : tests/test_hook.cc.i
+
+tests/test_hook.s: tests/test_hook.cc.s
+
+.PHONY : tests/test_hook.s
+
+# target to generate assembly for a file
+tests/test_hook.cc.s:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.s
+.PHONY : tests/test_hook.cc.s
 
 tests/test_iomanager.o: tests/test_iomanager.cc.o
 
@@ -430,6 +470,33 @@ webserve/config.cc.s:
 	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/config.cc.s
 .PHONY : webserve/config.cc.s
 
+webserve/fd_manager.o: webserve/fd_manager.cc.o
+
+.PHONY : webserve/fd_manager.o
+
+# target to build an object file
+webserve/fd_manager.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o
+.PHONY : webserve/fd_manager.cc.o
+
+webserve/fd_manager.i: webserve/fd_manager.cc.i
+
+.PHONY : webserve/fd_manager.i
+
+# target to preprocess a source file
+webserve/fd_manager.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.i
+.PHONY : webserve/fd_manager.cc.i
+
+webserve/fd_manager.s: webserve/fd_manager.cc.s
+
+.PHONY : webserve/fd_manager.s
+
+# target to generate assembly for a file
+webserve/fd_manager.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.s
+.PHONY : webserve/fd_manager.cc.s
+
 webserve/fiber.o: webserve/fiber.cc.o
 
 .PHONY : webserve/fiber.o
@@ -456,6 +523,33 @@ webserve/fiber.s: webserve/fiber.cc.s
 webserve/fiber.cc.s:
 	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/fiber.cc.s
 .PHONY : webserve/fiber.cc.s
+
+webserve/hook.o: webserve/hook.cc.o
+
+.PHONY : webserve/hook.o
+
+# target to build an object file
+webserve/hook.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/hook.cc.o
+.PHONY : webserve/hook.cc.o
+
+webserve/hook.i: webserve/hook.cc.i
+
+.PHONY : webserve/hook.i
+
+# target to preprocess a source file
+webserve/hook.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/hook.cc.i
+.PHONY : webserve/hook.cc.i
+
+webserve/hook.s: webserve/hook.cc.s
+
+.PHONY : webserve/hook.s
+
+# target to generate assembly for a file
+webserve/hook.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/hook.cc.s
+.PHONY : webserve/hook.cc.s
 
 webserve/iomanager.o: webserve/iomanager.cc.o
 
@@ -627,6 +721,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_hook"
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
 	@echo "... test_log"
@@ -641,6 +736,9 @@ help:
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
@@ -659,9 +757,15 @@ help:
 	@echo "... webserve/config.o"
 	@echo "... webserve/config.i"
 	@echo "... webserve/config.s"
+	@echo "... webserve/fd_manager.o"
+	@echo "... webserve/fd_manager.i"
+	@echo "... webserve/fd_manager.s"
 	@echo "... webserve/fiber.o"
 	@echo "... webserve/fiber.i"
 	@echo "... webserve/fiber.s"
+	@echo "... webserve/hook.o"
+	@echo "... webserve/hook.i"
+	@echo "... webserve/hook.s"
 	@echo "... webserve/iomanager.o"
 	@echo "... webserve/iomanager.i"
 	@echo "... webserve/iomanager.s"

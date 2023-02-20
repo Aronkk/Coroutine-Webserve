@@ -4,6 +4,7 @@
 CMakeFiles/test_config.dir/tests/test_config.cc.o: .././webserve/config.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: .././webserve/fiber.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: .././webserve/log.h
+CMakeFiles/test_config.dir/tests/test_config.cc.o: .././webserve/noncopyable.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: .././webserve/singleton.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: .././webserve/thread.h
 CMakeFiles/test_config.dir/tests/test_config.cc.o: .././webserve/util.h
