@@ -249,9 +249,33 @@ CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o.provides: CMakeFiles/my_sylar.di
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o.provides.build: CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o
 
 
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: CMakeFiles/my_sylar.dir/flags.make
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/my_sylar.dir/webserve/socket.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"webserve/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_sylar.dir/webserve/socket.cc.o -c /home/lwk/Coroutine-Webserve/webserve/socket.cc
+
+CMakeFiles/my_sylar.dir/webserve/socket.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_sylar.dir/webserve/socket.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"webserve/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lwk/Coroutine-Webserve/webserve/socket.cc > CMakeFiles/my_sylar.dir/webserve/socket.cc.i
+
+CMakeFiles/my_sylar.dir/webserve/socket.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_sylar.dir/webserve/socket.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"webserve/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lwk/Coroutine-Webserve/webserve/socket.cc -o CMakeFiles/my_sylar.dir/webserve/socket.cc.s
+
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o.requires:
+
+.PHONY : CMakeFiles/my_sylar.dir/webserve/socket.cc.o.requires
+
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o.provides: CMakeFiles/my_sylar.dir/webserve/socket.cc.o.requires
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/socket.cc.o.provides.build
+.PHONY : CMakeFiles/my_sylar.dir/webserve/socket.cc.o.provides
+
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o.provides.build: CMakeFiles/my_sylar.dir/webserve/socket.cc.o
+
+
 CMakeFiles/my_sylar.dir/webserve/timer.cc.o: CMakeFiles/my_sylar.dir/flags.make
 CMakeFiles/my_sylar.dir/webserve/timer.cc.o: ../webserve/timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/my_sylar.dir/webserve/timer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/my_sylar.dir/webserve/timer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"webserve/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_sylar.dir/webserve/timer.cc.o -c /home/lwk/Coroutine-Webserve/webserve/timer.cc
 
 CMakeFiles/my_sylar.dir/webserve/timer.cc.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/my_sylar.dir/webserve/timer.cc.o.provides.build: CMakeFiles/my_sylar.
 
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: CMakeFiles/my_sylar.dir/flags.make
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/my_sylar.dir/webserve/thread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/my_sylar.dir/webserve/thread.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"webserve/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_sylar.dir/webserve/thread.cc.o -c /home/lwk/Coroutine-Webserve/webserve/thread.cc
 
 CMakeFiles/my_sylar.dir/webserve/thread.cc.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/my_sylar.dir/webserve/thread.cc.o.provides.build: CMakeFiles/my_sylar
 
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: CMakeFiles/my_sylar.dir/flags.make
 CMakeFiles/my_sylar.dir/webserve/util.cc.o: ../webserve/util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/my_sylar.dir/webserve/util.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/my_sylar.dir/webserve/util.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"webserve/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_sylar.dir/webserve/util.cc.o -c /home/lwk/Coroutine-Webserve/webserve/util.cc
 
 CMakeFiles/my_sylar.dir/webserve/util.cc.i: cmake_force
@@ -331,6 +355,7 @@ my_sylar_OBJECTS = \
 "CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o" \
 "CMakeFiles/my_sylar.dir/webserve/log.cc.o" \
 "CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o" \
+"CMakeFiles/my_sylar.dir/webserve/socket.cc.o" \
 "CMakeFiles/my_sylar.dir/webserve/timer.cc.o" \
 "CMakeFiles/my_sylar.dir/webserve/thread.cc.o" \
 "CMakeFiles/my_sylar.dir/webserve/util.cc.o"
@@ -346,12 +371,13 @@ my_sylar_EXTERNAL_OBJECTS =
 ../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o
 ../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/webserve/log.cc.o
 ../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o
+../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/webserve/socket.cc.o
 ../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/webserve/timer.cc.o
 ../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/webserve/thread.cc.o
 ../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/webserve/util.cc.o
 ../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/build.make
 ../lib/libmy_sylar.so: CMakeFiles/my_sylar.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library ../lib/libmy_sylar.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lwk/Coroutine-Webserve/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library ../lib/libmy_sylar.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_sylar.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -367,6 +393,7 @@ CMakeFiles/my_sylar.dir/requires: CMakeFiles/my_sylar.dir/webserve/hook.cc.o.req
 CMakeFiles/my_sylar.dir/requires: CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o.requires
 CMakeFiles/my_sylar.dir/requires: CMakeFiles/my_sylar.dir/webserve/log.cc.o.requires
 CMakeFiles/my_sylar.dir/requires: CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o.requires
+CMakeFiles/my_sylar.dir/requires: CMakeFiles/my_sylar.dir/webserve/socket.cc.o.requires
 CMakeFiles/my_sylar.dir/requires: CMakeFiles/my_sylar.dir/webserve/timer.cc.o.requires
 CMakeFiles/my_sylar.dir/requires: CMakeFiles/my_sylar.dir/webserve/thread.cc.o.requires
 CMakeFiles/my_sylar.dir/requires: CMakeFiles/my_sylar.dir/webserve/util.cc.o.requires

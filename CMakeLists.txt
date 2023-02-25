@@ -25,6 +25,7 @@ set(LIB_SRC
     webserve/iomanager.cc
     webserve/log.cc
     webserve/scheduler.cc
+    webserve/socket.cc
     webserve/timer.cc
     webserve/thread.cc
     webserve/util.cc
@@ -89,6 +90,11 @@ target_link_libraries(test_hook ${LIB_LIB})
 add_executable(test_address tests/test_address.cc)
 force_redefine_file_macro_for_sources(test_address) #__FILE__
 target_link_libraries(test_address ${LIB_LIB})
+
+
+add_executable(test_socket tests/test_socket.cc)
+force_redefine_file_macro_for_sources(test_socket) #__FILE__
+target_link_libraries(test_socket ${LIB_LIB})
 
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

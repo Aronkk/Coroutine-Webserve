@@ -24,6 +24,8 @@ CXX_INCLUDES = -I/home/lwk/Coroutine-Webserve/. -I/home/lwk/apps/yaml-cpp-master
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o_DEFINES = __FILE__="webserve/scheduler.cc"
 
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/socket.cc.o_DEFINES = __FILE__="webserve/socket.cc"
+
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/timer.cc.o_DEFINES = __FILE__="webserve/timer.cc"
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/thread.cc.o_DEFINES = __FILE__="webserve/thread.cc"

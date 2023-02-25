@@ -228,6 +228,19 @@ test_config/fast:
 .PHONY : test_config/fast
 
 #=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
+#=============================================================================
 # Target rules for targets named test_fiber
 
 # Build rule for target.
@@ -428,6 +441,33 @@ tests/test_scheduler.s: tests/test_scheduler.cc.s
 tests/test_scheduler.cc.s:
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
 .PHONY : tests/test_scheduler.cc.s
+
+tests/test_socket.o: tests/test_socket.cc.o
+
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cc.o:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.o
+.PHONY : tests/test_socket.cc.o
+
+tests/test_socket.i: tests/test_socket.cc.i
+
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cc.i:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.i
+.PHONY : tests/test_socket.cc.i
+
+tests/test_socket.s: tests/test_socket.cc.s
+
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cc.s:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.s
+.PHONY : tests/test_socket.cc.s
 
 tests/test_thread.o: tests/test_thread.cc.o
 
@@ -699,6 +739,33 @@ webserve/scheduler.cc.s:
 	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/scheduler.cc.s
 .PHONY : webserve/scheduler.cc.s
 
+webserve/socket.o: webserve/socket.cc.o
+
+.PHONY : webserve/socket.o
+
+# target to build an object file
+webserve/socket.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/socket.cc.o
+.PHONY : webserve/socket.cc.o
+
+webserve/socket.i: webserve/socket.cc.i
+
+.PHONY : webserve/socket.i
+
+# target to preprocess a source file
+webserve/socket.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/socket.cc.i
+.PHONY : webserve/socket.cc.i
+
+webserve/socket.s: webserve/socket.cc.s
+
+.PHONY : webserve/socket.s
+
+# target to generate assembly for a file
+webserve/socket.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/socket.cc.s
+.PHONY : webserve/socket.cc.s
+
 webserve/thread.o: webserve/thread.cc.o
 
 .PHONY : webserve/thread.o
@@ -797,6 +864,7 @@ help:
 	@echo "... test_thread"
 	@echo "... test_util"
 	@echo "... test_config"
+	@echo "... test_socket"
 	@echo "... test_fiber"
 	@echo "... tests/test_address.o"
 	@echo "... tests/test_address.i"
@@ -819,6 +887,9 @@ help:
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
@@ -849,6 +920,9 @@ help:
 	@echo "... webserve/scheduler.o"
 	@echo "... webserve/scheduler.i"
 	@echo "... webserve/scheduler.s"
+	@echo "... webserve/socket.o"
+	@echo "... webserve/socket.i"
+	@echo "... webserve/socket.s"
 	@echo "... webserve/thread.o"
 	@echo "... webserve/thread.i"
 	@echo "... webserve/thread.s"

@@ -215,6 +215,22 @@ CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/scheduler.cc.o: ../webserve/util.h
 
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/address.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/fd_manager.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/fiber.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/hook.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/iomanager.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/macro.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/noncopyable.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/scheduler.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/singleton.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/socket.cc
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/socket.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/thread.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/timer.h
+CMakeFiles/my_sylar.dir/webserve/socket.cc.o: ../webserve/util.h
+
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/log.h
 CMakeFiles/my_sylar.dir/webserve/thread.cc.o: ../webserve/noncopyable.h

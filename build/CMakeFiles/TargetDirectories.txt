@@ -9,4 +9,5 @@
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_thread.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_util.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_config.dir
+/home/lwk/Coroutine-Webserve/build/CMakeFiles/test_socket.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_fiber.dir
