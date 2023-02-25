@@ -1,0 +1,20 @@
+
+提供网络地址相关的类，支持与网络地址相关的操作，一共有以下几个类：
+
+Address：
+    -所有网络地址的基类，抽象类，对应sockaddr类型，但只包含抽象方法，不包含具体的成员。除此外，Address作为地址类还提供了网络地址查询及网卡地址查询功能。
+
+IPAddress：
+    -IP地址的基类，抽象类，在Address基础上，增加了IP地址相关的端口以及子网掩码、广播地址、网段地址操作，同样是只包含抽象方法，不包含具体的成员。
+
+IPv4Address：sockaddr_in
+    -IPv4地址类，实体类，表示一个IPv4地址，对应sockaddr_in类型，包含一个sockaddr_in成员，可以操作该成员的网络地址和端口，以及获取子码掩码等操作。
+
+IPv6Address：sockaddr_in6
+    -IPv6地址类，实体类，与IPv4Address类似，表示一个IPv6地址，对应sockaddr_in6类型，包含一个sockaddr_in6成员。
+
+UnixAddreess：
+    -Unix域套接字类，对应sockaddr_un类型，同上。
+
+UnknownAddress：sockaddr_un
+    -表示一个未知类型的套接字地址，实体类，对应sockaddr类型，这个类型与Address类型的区别是它包含一个sockaddr成员，并且是一个实体类。
