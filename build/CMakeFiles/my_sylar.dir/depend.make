@@ -11,6 +11,16 @@ CMakeFiles/my_sylar.dir/webserve/address.cc.o: ../webserve/singleton.h
 CMakeFiles/my_sylar.dir/webserve/address.cc.o: ../webserve/thread.h
 CMakeFiles/my_sylar.dir/webserve/address.cc.o: ../webserve/util.h
 
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/bytearray.cc
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/bytearray.h
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/endian.h
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/fiber.h
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/noncopyable.h
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/singleton.h
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/thread.h
+CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o: ../webserve/util.h
+
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/config.h
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/config.cc.o: .././webserve/log.h

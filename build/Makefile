@@ -176,6 +176,19 @@ test_log/fast:
 .PHONY : test_log/fast
 
 #=============================================================================
+# Target rules for targets named test_bytearray
+
+# Build rule for target.
+test_bytearray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bytearray
+.PHONY : test_bytearray
+
+# fast build rule for target.
+test_bytearray/fast:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+.PHONY : test_bytearray/fast
+
+#=============================================================================
 # Target rules for targets named my_sylar
 
 # Build rule for target.
@@ -279,6 +292,33 @@ tests/test_address.s: tests/test_address.cc.s
 tests/test_address.cc.s:
 	$(MAKE) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.s
 .PHONY : tests/test_address.cc.s
+
+tests/test_bytearray.o: tests/test_bytearray.cc.o
+
+.PHONY : tests/test_bytearray.o
+
+# target to build an object file
+tests/test_bytearray.cc.o:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o
+.PHONY : tests/test_bytearray.cc.o
+
+tests/test_bytearray.i: tests/test_bytearray.cc.i
+
+.PHONY : tests/test_bytearray.i
+
+# target to preprocess a source file
+tests/test_bytearray.cc.i:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.i
+.PHONY : tests/test_bytearray.cc.i
+
+tests/test_bytearray.s: tests/test_bytearray.cc.s
+
+.PHONY : tests/test_bytearray.s
+
+# target to generate assembly for a file
+tests/test_bytearray.cc.s:
+	$(MAKE) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.s
+.PHONY : tests/test_bytearray.cc.s
 
 tests/test_config.o: tests/test_config.cc.o
 
@@ -549,6 +589,33 @@ webserve/address.s: webserve/address.cc.s
 webserve/address.cc.s:
 	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/address.cc.s
 .PHONY : webserve/address.cc.s
+
+webserve/bytearray.o: webserve/bytearray.cc.o
+
+.PHONY : webserve/bytearray.o
+
+# target to build an object file
+webserve/bytearray.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o
+.PHONY : webserve/bytearray.cc.o
+
+webserve/bytearray.i: webserve/bytearray.cc.i
+
+.PHONY : webserve/bytearray.i
+
+# target to preprocess a source file
+webserve/bytearray.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/bytearray.cc.i
+.PHONY : webserve/bytearray.cc.i
+
+webserve/bytearray.s: webserve/bytearray.cc.s
+
+.PHONY : webserve/bytearray.s
+
+# target to generate assembly for a file
+webserve/bytearray.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/bytearray.cc.s
+.PHONY : webserve/bytearray.cc.s
 
 webserve/config.o: webserve/config.cc.o
 
@@ -860,6 +927,7 @@ help:
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
 	@echo "... test_log"
+	@echo "... test_bytearray"
 	@echo "... my_sylar"
 	@echo "... test_thread"
 	@echo "... test_util"
@@ -869,6 +937,9 @@ help:
 	@echo "... tests/test_address.o"
 	@echo "... tests/test_address.i"
 	@echo "... tests/test_address.s"
+	@echo "... tests/test_bytearray.o"
+	@echo "... tests/test_bytearray.i"
+	@echo "... tests/test_bytearray.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
@@ -899,6 +970,9 @@ help:
 	@echo "... webserve/address.o"
 	@echo "... webserve/address.i"
 	@echo "... webserve/address.s"
+	@echo "... webserve/bytearray.o"
+	@echo "... webserve/bytearray.i"
+	@echo "... webserve/bytearray.s"
 	@echo "... webserve/config.o"
 	@echo "... webserve/config.i"
 	@echo "... webserve/config.s"

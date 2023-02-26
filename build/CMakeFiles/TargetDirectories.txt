@@ -5,6 +5,7 @@
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_iomanager.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_scheduler.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_log.dir
+/home/lwk/Coroutine-Webserve/build/CMakeFiles/test_bytearray.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/my_sylar.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_thread.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_util.dir

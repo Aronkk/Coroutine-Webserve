@@ -3,10 +3,15 @@
 
 CMakeFiles/test_socket.dir/tests/test_socket.cc.o
  .././webserve/address.h
+ .././webserve/bytearray.h
  .././webserve/config.h
+ .././webserve/endian.h
+ .././webserve/fd_manager.h
  .././webserve/fiber.h
+ .././webserve/hook.h
  .././webserve/iomanager.h
  .././webserve/log.h
+ .././webserve/macro.h
  .././webserve/noncopyable.h
  .././webserve/scheduler.h
  .././webserve/singleton.h

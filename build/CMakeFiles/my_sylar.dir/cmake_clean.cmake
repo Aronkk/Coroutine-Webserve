@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/my_sylar.dir/webserve/address.cc.o"
+  "CMakeFiles/my_sylar.dir/webserve/bytearray.cc.o"
   "CMakeFiles/my_sylar.dir/webserve/config.cc.o"
   "CMakeFiles/my_sylar.dir/webserve/fd_manager.cc.o"
   "CMakeFiles/my_sylar.dir/webserve/fiber.cc.o"

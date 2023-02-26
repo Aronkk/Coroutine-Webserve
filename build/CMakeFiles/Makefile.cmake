@@ -48,6 +48,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_iomanager.dir/DependInfo.cmake"
   "CMakeFiles/test_scheduler.dir/DependInfo.cmake"
   "CMakeFiles/test_log.dir/DependInfo.cmake"
+  "CMakeFiles/test_bytearray.dir/DependInfo.cmake"
   "CMakeFiles/my_sylar.dir/DependInfo.cmake"
   "CMakeFiles/test_thread.dir/DependInfo.cmake"
   "CMakeFiles/test_util.dir/DependInfo.cmake"

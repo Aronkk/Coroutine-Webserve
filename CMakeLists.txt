@@ -18,6 +18,7 @@ link_directories(/home/lwk/Coroutine-Webserve/lib)
 # 将下面的 .cc 文件，统称为 LIB_SRC 变量
 set(LIB_SRC
     webserve/address.cc
+    webserve/bytearray.cc
     webserve/config.cc
     webserve/fd_manager.cc
     webserve/fiber.cc
@@ -95,6 +96,11 @@ target_link_libraries(test_address ${LIB_LIB})
 add_executable(test_socket tests/test_socket.cc)
 force_redefine_file_macro_for_sources(test_socket) #__FILE__
 target_link_libraries(test_socket ${LIB_LIB})
+
+
+add_executable(test_bytearray tests/test_bytearray.cc)
+force_redefine_file_macro_for_sources(test_bytearray) #__FILE__
+target_link_libraries(test_bytearray ${LIB_LIB})
 
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
