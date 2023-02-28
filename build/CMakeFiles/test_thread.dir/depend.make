@@ -8,6 +8,11 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/endian.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/fd_manager.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/fiber.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/hook.h
+CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/http/http.h
+CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/http/http11_common.h
+CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/http/http11_parser.h
+CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/http/http_parser.h
+CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/http/httpclient_parser.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/iomanager.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/log.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: .././webserve/macro.h

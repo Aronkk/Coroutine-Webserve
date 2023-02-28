@@ -160,6 +160,63 @@ CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/inclu
 CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/traits.h
 CMakeFiles/my_sylar.dir/webserve/hook.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
 
+CMakeFiles/my_sylar.dir/webserve/http/http.cc.o: .././webserve/util.h
+CMakeFiles/my_sylar.dir/webserve/http/http.cc.o: ../webserve/http/http.cc
+CMakeFiles/my_sylar.dir/webserve/http/http.cc.o: ../webserve/http/http.h
+
+CMakeFiles/my_sylar.dir/webserve/http/http11_parser.cc.o: ../webserve/http/http11_common.h
+CMakeFiles/my_sylar.dir/webserve/http/http11_parser.cc.o: ../webserve/http/http11_parser.cc
+CMakeFiles/my_sylar.dir/webserve/http/http11_parser.cc.o: ../webserve/http/http11_parser.h
+
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: .././webserve/config.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: .././webserve/fiber.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: .././webserve/log.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: .././webserve/noncopyable.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: .././webserve/singleton.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: .././webserve/thread.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: .././webserve/util.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: ../webserve/http/http.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: ../webserve/http/http11_common.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: ../webserve/http/http11_parser.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: ../webserve/http/http_parser.cc
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: ../webserve/http/http_parser.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: ../webserve/http/httpclient_parser.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/binary.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/dll.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitter.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitterdef.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emittermanip.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/emitterstyle.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/exceptions.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/mark.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/convert.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/impl.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/iterator.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/iterator_fwd.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/memory.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_data.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_iterator.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/detail/node_ref.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/emit.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/impl.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/iterator.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/node.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/parse.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/ptr.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/node/type.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/noexcept.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/null.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/ostream_wrapper.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/parser.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/stlemitter.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/traits.h
+CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o: /home/lwk/apps/yaml-cpp-master/include/yaml-cpp/yaml.h
+
+CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.cc.o: ../webserve/http/http11_common.h
+CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.cc.o: ../webserve/http/httpclient_parser.cc
+CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.cc.o: ../webserve/http/httpclient_parser.h
+
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/fiber.h
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/iomanager.cc
 CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o: ../webserve/iomanager.h

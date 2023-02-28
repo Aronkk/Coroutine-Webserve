@@ -1,4 +1,6 @@
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/rebuild_cache.dir
+/home/lwk/Coroutine-Webserve/build/CMakeFiles/test_http_parser.dir
+/home/lwk/Coroutine-Webserve/build/CMakeFiles/test_http.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/edit_cache.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_address.dir
 /home/lwk/Coroutine-Webserve/build/CMakeFiles/test_hook.dir

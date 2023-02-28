@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_http_parser
+
+# Build rule for target.
+test_http_parser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http_parser
+.PHONY : test_http_parser
+
+# fast build rule for target.
+test_http_parser/fast:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
+.PHONY : test_http_parser/fast
+
+#=============================================================================
+# Target rules for targets named test_http
+
+# Build rule for target.
+test_http: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_http
+.PHONY : test_http
+
+# fast build rule for target.
+test_http/fast:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
+.PHONY : test_http/fast
+
+#=============================================================================
 # Target rules for targets named test_address
 
 # Build rule for target.
@@ -400,6 +426,60 @@ tests/test_hook.s: tests/test_hook.cc.s
 tests/test_hook.cc.s:
 	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.s
 .PHONY : tests/test_hook.cc.s
+
+tests/test_http.o: tests/test_http.cc.o
+
+.PHONY : tests/test_http.o
+
+# target to build an object file
+tests/test_http.cc.o:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.o
+.PHONY : tests/test_http.cc.o
+
+tests/test_http.i: tests/test_http.cc.i
+
+.PHONY : tests/test_http.i
+
+# target to preprocess a source file
+tests/test_http.cc.i:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.i
+.PHONY : tests/test_http.cc.i
+
+tests/test_http.s: tests/test_http.cc.s
+
+.PHONY : tests/test_http.s
+
+# target to generate assembly for a file
+tests/test_http.cc.s:
+	$(MAKE) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.s
+.PHONY : tests/test_http.cc.s
+
+tests/test_http_parser.o: tests/test_http_parser.cc.o
+
+.PHONY : tests/test_http_parser.o
+
+# target to build an object file
+tests/test_http_parser.cc.o:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o
+.PHONY : tests/test_http_parser.cc.o
+
+tests/test_http_parser.i: tests/test_http_parser.cc.i
+
+.PHONY : tests/test_http_parser.i
+
+# target to preprocess a source file
+tests/test_http_parser.cc.i:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.i
+.PHONY : tests/test_http_parser.cc.i
+
+tests/test_http_parser.s: tests/test_http_parser.cc.s
+
+.PHONY : tests/test_http_parser.s
+
+# target to generate assembly for a file
+tests/test_http_parser.cc.s:
+	$(MAKE) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.s
+.PHONY : tests/test_http_parser.cc.s
 
 tests/test_iomanager.o: tests/test_iomanager.cc.o
 
@@ -725,6 +805,114 @@ webserve/hook.cc.s:
 	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/hook.cc.s
 .PHONY : webserve/hook.cc.s
 
+webserve/http/http.o: webserve/http/http.cc.o
+
+.PHONY : webserve/http/http.o
+
+# target to build an object file
+webserve/http/http.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http.cc.o
+.PHONY : webserve/http/http.cc.o
+
+webserve/http/http.i: webserve/http/http.cc.i
+
+.PHONY : webserve/http/http.i
+
+# target to preprocess a source file
+webserve/http/http.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http.cc.i
+.PHONY : webserve/http/http.cc.i
+
+webserve/http/http.s: webserve/http/http.cc.s
+
+.PHONY : webserve/http/http.s
+
+# target to generate assembly for a file
+webserve/http/http.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http.cc.s
+.PHONY : webserve/http/http.cc.s
+
+webserve/http/http11_parser.o: webserve/http/http11_parser.cc.o
+
+.PHONY : webserve/http/http11_parser.o
+
+# target to build an object file
+webserve/http/http11_parser.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http11_parser.cc.o
+.PHONY : webserve/http/http11_parser.cc.o
+
+webserve/http/http11_parser.i: webserve/http/http11_parser.cc.i
+
+.PHONY : webserve/http/http11_parser.i
+
+# target to preprocess a source file
+webserve/http/http11_parser.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http11_parser.cc.i
+.PHONY : webserve/http/http11_parser.cc.i
+
+webserve/http/http11_parser.s: webserve/http/http11_parser.cc.s
+
+.PHONY : webserve/http/http11_parser.s
+
+# target to generate assembly for a file
+webserve/http/http11_parser.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http11_parser.cc.s
+.PHONY : webserve/http/http11_parser.cc.s
+
+webserve/http/http_parser.o: webserve/http/http_parser.cc.o
+
+.PHONY : webserve/http/http_parser.o
+
+# target to build an object file
+webserve/http/http_parser.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o
+.PHONY : webserve/http/http_parser.cc.o
+
+webserve/http/http_parser.i: webserve/http/http_parser.cc.i
+
+.PHONY : webserve/http/http_parser.i
+
+# target to preprocess a source file
+webserve/http/http_parser.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.i
+.PHONY : webserve/http/http_parser.cc.i
+
+webserve/http/http_parser.s: webserve/http/http_parser.cc.s
+
+.PHONY : webserve/http/http_parser.s
+
+# target to generate assembly for a file
+webserve/http/http_parser.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.s
+.PHONY : webserve/http/http_parser.cc.s
+
+webserve/http/httpclient_parser.o: webserve/http/httpclient_parser.cc.o
+
+.PHONY : webserve/http/httpclient_parser.o
+
+# target to build an object file
+webserve/http/httpclient_parser.cc.o:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.cc.o
+.PHONY : webserve/http/httpclient_parser.cc.o
+
+webserve/http/httpclient_parser.i: webserve/http/httpclient_parser.cc.i
+
+.PHONY : webserve/http/httpclient_parser.i
+
+# target to preprocess a source file
+webserve/http/httpclient_parser.cc.i:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.cc.i
+.PHONY : webserve/http/httpclient_parser.cc.i
+
+webserve/http/httpclient_parser.s: webserve/http/httpclient_parser.cc.s
+
+.PHONY : webserve/http/httpclient_parser.s
+
+# target to generate assembly for a file
+webserve/http/httpclient_parser.cc.s:
+	$(MAKE) -f CMakeFiles/my_sylar.dir/build.make CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.cc.s
+.PHONY : webserve/http/httpclient_parser.cc.s
+
 webserve/iomanager.o: webserve/iomanager.cc.o
 
 .PHONY : webserve/iomanager.o
@@ -921,6 +1109,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_http_parser"
+	@echo "... test_http"
 	@echo "... edit_cache"
 	@echo "... test_address"
 	@echo "... test_hook"
@@ -949,6 +1139,12 @@ help:
 	@echo "... tests/test_hook.o"
 	@echo "... tests/test_hook.i"
 	@echo "... tests/test_hook.s"
+	@echo "... tests/test_http.o"
+	@echo "... tests/test_http.i"
+	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_parser.o"
+	@echo "... tests/test_http_parser.i"
+	@echo "... tests/test_http_parser.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
@@ -985,6 +1181,18 @@ help:
 	@echo "... webserve/hook.o"
 	@echo "... webserve/hook.i"
 	@echo "... webserve/hook.s"
+	@echo "... webserve/http/http.o"
+	@echo "... webserve/http/http.i"
+	@echo "... webserve/http/http.s"
+	@echo "... webserve/http/http11_parser.o"
+	@echo "... webserve/http/http11_parser.i"
+	@echo "... webserve/http/http11_parser.s"
+	@echo "... webserve/http/http_parser.o"
+	@echo "... webserve/http/http_parser.i"
+	@echo "... webserve/http/http_parser.s"
+	@echo "... webserve/http/httpclient_parser.o"
+	@echo "... webserve/http/httpclient_parser.i"
+	@echo "... webserve/http/httpclient_parser.s"
 	@echo "... webserve/iomanager.o"
 	@echo "... webserve/iomanager.i"
 	@echo "... webserve/iomanager.s"

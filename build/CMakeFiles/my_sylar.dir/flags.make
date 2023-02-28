@@ -18,6 +18,14 @@ CXX_INCLUDES = -I/home/lwk/Coroutine-Webserve/. -I/home/lwk/apps/yaml-cpp-master
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/fiber.cc.o_DEFINES = __FILE__="webserve/fiber.cc"
 
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http.cc.o_DEFINES = __FILE__="webserve/http/http.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o_DEFINES = __FILE__="webserve/http/http_parser.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http11_parser.cc.o_DEFINES = __FILE__="webserve/http/http11_parser.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.cc.o_DEFINES = __FILE__="webserve/http/httpclient_parser.cc"
+
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/hook.cc.o_DEFINES = __FILE__="webserve/hook.cc"
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/iomanager.cc.o_DEFINES = __FILE__="webserve/iomanager.cc"

@@ -22,6 +22,10 @@ set(LIB_SRC
     webserve/config.cc
     webserve/fd_manager.cc
     webserve/fiber.cc
+    webserve/http/http.cc
+    webserve/http/http_parser.cc
+    webserve/http/http11_parser.cc
+    webserve/http/httpclient_parser.cc
     webserve/hook.cc
     webserve/iomanager.cc
     webserve/log.cc
@@ -101,6 +105,16 @@ target_link_libraries(test_socket ${LIB_LIB})
 add_executable(test_bytearray tests/test_bytearray.cc)
 force_redefine_file_macro_for_sources(test_bytearray) #__FILE__
 target_link_libraries(test_bytearray ${LIB_LIB})
+
+
+add_executable(test_http tests/test_http.cc)
+force_redefine_file_macro_for_sources(test_http) #__FILE__
+target_link_libraries(test_http ${LIB_LIB})
+
+
+add_executable(test_http_parser tests/test_http_parser.cc)
+force_redefine_file_macro_for_sources(test_http_parser) #__FILE__
+target_link_libraries(test_http_parser ${LIB_LIB})
 
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
