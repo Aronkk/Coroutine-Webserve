@@ -20,11 +20,15 @@ CXX_INCLUDES = -I/home/lwk/Coroutine-Webserve/. -I/home/lwk/apps/yaml-cpp-master
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http.cc.o_DEFINES = __FILE__="webserve/http/http.cc"
 
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http_connection.cc.o_DEFINES = __FILE__="webserve/http/http_connection.cc"
+
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http_parser.cc.o_DEFINES = __FILE__="webserve/http/http_parser.cc"
 
-# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http11_parser.cc.o_DEFINES = __FILE__="webserve/http/http11_parser.cc"
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http_session.cc.o_DEFINES = __FILE__="webserve/http/http_session.cc"
 
-# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.cc.o_DEFINES = __FILE__="webserve/http/httpclient_parser.cc"
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http_server.cc.o_DEFINES = __FILE__="webserve/http/http_server.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/servlet.cc.o_DEFINES = __FILE__="webserve/http/servlet.cc"
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/hook.cc.o_DEFINES = __FILE__="webserve/hook.cc"
 
@@ -36,9 +40,21 @@ CXX_INCLUDES = -I/home/lwk/Coroutine-Webserve/. -I/home/lwk/apps/yaml-cpp-master
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/socket.cc.o_DEFINES = __FILE__="webserve/socket.cc"
 
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/stream.cc.o_DEFINES = __FILE__="webserve/stream.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/streams/socket_stream.cc.o_DEFINES = __FILE__="webserve/streams/socket_stream.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/tcp_server.cc.o_DEFINES = __FILE__="webserve/tcp_server.cc"
+
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/timer.cc.o_DEFINES = __FILE__="webserve/timer.cc"
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/thread.cc.o_DEFINES = __FILE__="webserve/thread.cc"
 
 # Custom defines: CMakeFiles/my_sylar.dir/webserve/util.cc.o_DEFINES = __FILE__="webserve/util.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/http11_parser.rl.cc.o_DEFINES = __FILE__="webserve/http/http11_parser.rl.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/http/httpclient_parser.rl.cc.o_DEFINES = __FILE__="webserve/http/httpclient_parser.rl.cc"
+
+# Custom defines: CMakeFiles/my_sylar.dir/webserve/uri.rl.cc.o_DEFINES = __FILE__="webserve/uri.rl.cc"
 

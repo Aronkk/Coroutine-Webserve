@@ -23,18 +23,27 @@ set(LIB_SRC
     webserve/fd_manager.cc
     webserve/fiber.cc
     webserve/http/http.cc
+    webserve/http/http_connection.cc
     webserve/http/http_parser.cc
-    webserve/http/http11_parser.cc
-    webserve/http/httpclient_parser.cc
+    webserve/http/http_session.cc
+    webserve/http/http_server.cc
+    webserve/http/servlet.cc
     webserve/hook.cc
     webserve/iomanager.cc
     webserve/log.cc
     webserve/scheduler.cc
     webserve/socket.cc
+    webserve/stream.cc
+    webserve/streams/socket_stream.cc
+    webserve/tcp_server.cc
     webserve/timer.cc
     webserve/thread.cc
     webserve/util.cc
     )
+
+ragelmaker(webserve/http/http11_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/webserve/http)
+ragelmaker(webserve/http/httpclient_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/webserve/http)
+ragelmaker(webserve/uri.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/webserve)
 
 # 通过变量 LIB_SRC 生成 libsylar.so 共享库（shared--动态，static--静态）
 add_library(my_sylar SHARED ${LIB_SRC})
@@ -115,6 +124,31 @@ target_link_libraries(test_http ${LIB_LIB})
 add_executable(test_http_parser tests/test_http_parser.cc)
 force_redefine_file_macro_for_sources(test_http_parser) #__FILE__
 target_link_libraries(test_http_parser ${LIB_LIB})
+
+
+add_executable(test_tcp_server tests/test_tcp_server.cc)
+force_redefine_file_macro_for_sources(test_tcp_server) #__FILE__
+target_link_libraries(test_tcp_server ${LIB_LIB})
+
+
+add_executable(echo_server examples/echo_server.cc)
+force_redefine_file_macro_for_sources(echo_server) #__FILE__
+target_link_libraries(echo_server ${LIB_LIB})
+
+
+add_executable(test_http_server tests/test_http_server.cc)
+force_redefine_file_macro_for_sources(test_http_server) #__FILE__
+target_link_libraries(test_http_server ${LIB_LIB})
+
+
+add_executable(test_http_connection tests/test_http_connection.cc)
+force_redefine_file_macro_for_sources(test_http_connection) #__FILE__
+target_link_libraries(test_http_connection ${LIB_LIB})
+
+
+add_executable(test_uri tests/test_uri.cc)
+force_redefine_file_macro_for_sources(test_uri) #__FILE__
+target_link_libraries(test_uri ${LIB_LIB})
 
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
