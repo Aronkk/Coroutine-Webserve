@@ -176,6 +176,19 @@ test_socket/fast:
 .PHONY : test_socket/fast
 
 #=============================================================================
+# Target rules for targets named my_http_server
+
+# Build rule for target.
+my_http_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_http_server
+.PHONY : my_http_server
+
+# fast build rule for target.
+my_http_server/fast:
+	$(MAKE) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/build
+.PHONY : my_http_server/fast
+
+#=============================================================================
 # Target rules for targets named test_config
 
 # Build rule for target.
@@ -383,6 +396,33 @@ examples/echo_server.s: examples/echo_server.cc.s
 examples/echo_server.cc.s:
 	$(MAKE) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.s
 .PHONY : examples/echo_server.cc.s
+
+samples/my_http_server.o: samples/my_http_server.cc.o
+
+.PHONY : samples/my_http_server.o
+
+# target to build an object file
+samples/my_http_server.cc.o:
+	$(MAKE) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o
+.PHONY : samples/my_http_server.cc.o
+
+samples/my_http_server.i: samples/my_http_server.cc.i
+
+.PHONY : samples/my_http_server.i
+
+# target to preprocess a source file
+samples/my_http_server.cc.i:
+	$(MAKE) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.i
+.PHONY : samples/my_http_server.cc.i
+
+samples/my_http_server.s: samples/my_http_server.cc.s
+
+.PHONY : samples/my_http_server.s
+
+# target to generate assembly for a file
+samples/my_http_server.cc.s:
+	$(MAKE) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.s
+.PHONY : samples/my_http_server.cc.s
 
 tests/test_address.o: tests/test_address.cc.o
 
@@ -1530,6 +1570,7 @@ help:
 	@echo "... test_http_server"
 	@echo "... test_fiber"
 	@echo "... test_socket"
+	@echo "... my_http_server"
 	@echo "... test_config"
 	@echo "... edit_cache"
 	@echo "... test_util"
@@ -1548,6 +1589,9 @@ help:
 	@echo "... examples/echo_server.o"
 	@echo "... examples/echo_server.i"
 	@echo "... examples/echo_server.s"
+	@echo "... samples/my_http_server.o"
+	@echo "... samples/my_http_server.i"
+	@echo "... samples/my_http_server.s"
 	@echo "... tests/test_address.o"
 	@echo "... tests/test_address.i"
 	@echo "... tests/test_address.s"

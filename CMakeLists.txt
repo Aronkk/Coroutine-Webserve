@@ -7,7 +7,7 @@ include (cmake/utils.cmake)
 
 # # 编译后需要显示的详细信息
 # set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
 
 include_directories(.)
 include_directories(/home/lwk/apps/yaml-cpp-master/include)
@@ -149,6 +149,11 @@ target_link_libraries(test_http_connection ${LIB_LIB})
 add_executable(test_uri tests/test_uri.cc)
 force_redefine_file_macro_for_sources(test_uri) #__FILE__
 target_link_libraries(test_uri ${LIB_LIB})
+
+
+add_executable(my_http_server samples/my_http_server.cc)
+force_redefine_file_macro_for_sources(my_http_server) #__FILE__
+target_link_libraries(my_http_server ${LIB_LIB})
 
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
